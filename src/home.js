@@ -7,6 +7,8 @@ class Home extends React.Component{
 
   testFunc = () => {
     console.log("The modal executed the function you passed in")
+    // This must be added to the end of any function passed into the modal 'onContinue' props
+    this.props.hideModal()
   }
 
   render(){
