@@ -1,7 +1,7 @@
 .modal{
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.4)
+  background-color: rgba(0, 0, 0, 0.6);
   position: fixed;
   z-index: 1;
   left: 0;
@@ -19,17 +19,36 @@
 
 .close{
   color: rgb(220, 53, 69);
+  float: right;
+}
+
+.close:hover{
+  color: rgb(200,35,51);
+  cursor: pointer;
 }
 
 .modalContent {
   border-radius: 5px;
   background-color: white;
-  text-align: center;
   padding: 5px;
+  margin: 15% auto;
+  width: 70%;
 }
 
 .modalHeader {
   font-size: 20px;
   font-weight: bold;
-  padding: 5px;
+  padding: 10px;
+  text-align: center;
+}
+
+.modalMessage{
+  padding: 10px;
+  text-align: center;
+}
+
+.modalActions{
+  padding: 10px;
+  width: fit-content;
+  margin: auto;
 }

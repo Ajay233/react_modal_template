@@ -1,6 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
+import "../stylesheets/modal.css"
+
 const Modal = (props) => {
 
   // props:
@@ -14,7 +16,7 @@ const Modal = (props) => {
     ReactDOM.createPortal(
       <div onClick={props.onClose} className={`modal ${props.show ? "show" : "hide"}`}>
         <div onClick={e => e.stopPropagation()} className="modalContent">
-          <span onClick={props.onClose} className={close}><i className="fas fa-times-circle"></i></span>
+          <span onClick={props.onClose} className="close"><i className="fas fa-times-circle"></i></span>
           <div className="modalHeader">
             {props.title}
           </div>
@@ -26,9 +28,8 @@ const Modal = (props) => {
             <button onClick={props.onClose}>Cancel</button>
           </div>
         </div>
-      </div>,
-      document.querySelector("#modal")
-    );
+      </div>, document.querySelector("#modal")
+    )
   );
 }
 
